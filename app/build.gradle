@@ -7,6 +7,13 @@ plugins {
     id 'application'
 }
 repositories {
+    maven {
+        url = uri("https://maven.pkg.github.com/UrosSysPro/systemVI")
+        credentials {
+            username = System.getenv("GITHUB_USERNAME")
+            password = System.getenv("GITHUB_API_KEY")
+        }
+    }
     mavenCentral()
 }
 
@@ -24,6 +31,7 @@ application {
 }
 
 dependencies {
+    implementation 'com.systempro.systemvi:system-vi:0.7.0'
     implementation 'org.scala-lang:scala3-library_3:3.0.1'
     implementation 'commons-collections:commons-collections:3.2.2'
 }
