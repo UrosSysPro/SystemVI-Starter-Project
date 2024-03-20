@@ -24,9 +24,17 @@ sourceSets {
 application {
     mainClass = 'org.example.app.Main'
 }
+import org.gradle.internal.os.OperatingSystem
 
+def osName(){
+    switch (OperatingSystem.current()){
+        case OperatingSystem.WINDOWS:return 'windows'
+        case OperatingSystem.LINUX:return 'linux'
+        case OperatingSystem.MAC_OS:return 'macos'
+    }
+}
 dependencies {
-    implementation 'com.systempro.systemvi:system-vi:0.7.3'
+    implementation 'com.systempro.systemvi:system-vi-'+osName()+':0.7.3'
     implementation 'org.scala-lang:scala3-library_3:3.0.1'
     implementation 'commons-collections:commons-collections:3.2.2'
 }
