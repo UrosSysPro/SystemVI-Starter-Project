@@ -2,9 +2,12 @@ package org.example.app
 import com.systemvi.engine.application.Game
 import com.systemvi.engine.camera.Camera3
 import com.systemvi.engine.renderers.ShapeRenderer
+import com.systemvi.engine.ui.Scene
+import com.systemvi.engine.ui.widgets.Container
 import com.systemvi.engine.window.Window
 import org.joml.Vector4f
-object App extends Game(3,3,60,800,600,"Test"):
+
+object Main extends Game(3,3,60,800,600,"Test"):
   var renderer:ShapeRenderer=null
   var camera:Camera3=null
   override def setup(window: Window): Unit =

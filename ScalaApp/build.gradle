@@ -9,10 +9,6 @@ plugins {
 repositories {
     maven {
         url = uri("https://maven.pkg.github.com/UrosSysPro/systemVI")
-//        credentials {
-//            username = System.getenv("GITHUB_USERNAME")
-//            password = System.getenv("GITHUB_API_KEY")
-//        }
     }
     mavenCentral()
 }
@@ -26,8 +22,7 @@ sourceSets {
 }
 
 application {
-    // Define the main class for the application.
-    mainClass = 'org.example.app.App'
+    mainClass = 'org.example.app.Main'
 }
 
 dependencies {

@@ -6,4 +6,5 @@
  */
 
 rootProject.name = 'scala-3-system-vi-app'
-include('app')
+include('ScalaApp')
+include('KotlinApp')
